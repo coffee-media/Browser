@@ -17,9 +17,21 @@
     
   <input type="text" class="form-control" id="search" >
 
+  <script>
+var input = document.getElementById("search");
+input.addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+      
+        if (input == "")
+        document.getElementById("frame").src = "";
+    }
+});
+</script>
+  
 </nav>
 <br>
 <hr>
-<iframe src="https://bing.com" style="border:none;" height="1000" width="1000"></iframe>
+<iframe src="https://bing.com" style="border:none;" height="1000" width="2000" id="frame"></iframe>
 </body>
 </html>
